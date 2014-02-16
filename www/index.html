@@ -14,8 +14,26 @@
             app.initialize();
         </script>
         <title>Sütipédia 2</title>
+        <style>
+        	#like-button {
+						  float: left;
+						  clear: both;
+						  width: 90%; 
+						  margin: 10px 0px 35px 15px;
+						  overflow: hidden;
+						}
+        </style>
     </head>
     <body>
+        
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/hu_HU/all.js#xfbml=1&appId=529520623830569";
+					  fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));</script>
         
         <button onclick="login()">Login</button>
 		<button onclick="me()">Me</button>
@@ -25,7 +43,7 @@
 		<button onclick="facebookWallPost()">facebookWallPost</button>
 		<button onclick="publishStoryFriend()">friendstory</button>
 		
-		<div id="like-button"><fb:like url="http://sutipedia.hu/" width="275"></fb:like></div>
+		
         
         <div id="data">loading ...</div>
         
